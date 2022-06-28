@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario de Registro</title>
+	  <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulario de Registro</h1>
+    <p>Por favor rellene este formulario con la información requerida. Gracias!</p>
+    <form action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label>Ingrese su Nombre: <input type="text" name="first-name" required /></label>
+        <label>Ingrese su Apellido: <input type="text" name="last-name" required /></label>
+        <label>Ingrese su Email: <input type="email" name="email" required /></label>
+        <label>Crea una nueva contraseña: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" name="account-type" class="inline" /> Cuenta Personal</label>
+        <label><input type="radio" name="account-type" class="inline" /> Cuenta de Negocios</label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> Acepto los <a href="https://www.freecodecamp.org/news/terms-of-service/">términos y condiciones</a>
+			  </label>
+      </fieldset>
+      <fieldset>
+        <label>Sube una foto de perfil: <input type="file" name="file" /></label>
+        <label>Ingrese su edad (años): <input type="number" name="age" min="13" max="120" />
+			  </label>
+        <label>¿Cómo te enteraste de nosotros?
+          <select name="referrer">
+            <option value="">(selecciona una)</option>
+            <option value="1">Noticias de FreeCodeCamp</option>
+            <option value="2">Canal de YouTube de FreeCodeCamp</option>
+            <option value="3">Foro de freeCodeCamp</option>
+            <option value="4">Otra</option>
+          </select>
+        </label>
+        <label>Biografía:
+          <textarea name="bio" rows="3" cols="30" placeholder="Me gusta programar en la playa..."></textarea>
+			  </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

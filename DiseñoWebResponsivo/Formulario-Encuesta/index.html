@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<title>Formulario/Encuesta</title>
+</head>
+<body>
+	<!--Introducción-->
+	<h1 id="title">Formulario/Encuesta para Futuros Programadores</h1>
+	<p id="description">Gracias por tomarte el tiempo de completarlo!</p>
+	<!--Formulario-->
+	<form id="survey-form">
+		<fieldset>
+			<label id="name-label">Nombre <input type="text" name="name" placeholder="Introduce tu nombre..." required></label>
+			<label id="email-label">Email <input type="email" name="email" placeholder="Introduce tu email..." required> </label>
+			<label id="number-label">Edad (opcional) <input type="number" name="number" min="10" max="120" placeholder="Introduce tu edad..."></label>
+		</fieldset>
+		<fieldset>
+			<p>¿Para qué quieres aprender a programar?</p>
+				<select id="dropdown">
+					<option value="">(Selecciona una)</option>
+					<option value="knowledge">Para adquirir más conocimientos</option>
+					<option value="profession">Para convertirlo en mi profesión y principal fuente de ingreso</option>
+					<option value="hobby">Para programar en mis tiempos libres, como hobby</option>
+					<option value="other">Otra</option>
+				</select>
+		</fieldset>
+		<fieldset>
+			<p>¿En qué área de la programación te gustaría desarrollarte?</p>
+			<label><input type="radio" name="area" value="web-development"> Desarrollo Web</label>
+			<label><input type="radio" name="area" value="mobile-development"> Desarrollo Móvil</label>
+			<label><input type="radio" name="area" value="application-development"> Desarrollo de Aplicaciones de Escritorio</label>
+			<label><input type="radio" name="area" value="os-development"> Desarrollo de Sistemas Operativos/Embebidos</label>
+			<label><input type="radio" name="area" value="games-development"> Desarrollo de Videojuegos</label>
+			<label><input type="radio" name="area" value="virtual-reality"> Realidad Virtual y Aumentada</label>
+			<label><input type="radio" name="area" value="computer-security"> Seguridad Informática</label>
+			<label><input type="radio" name="area" value="other"> Otra</label>
+		</fieldset>
+		<fieldset>
+			<p>¿Qué lenguajes de programación conoces?</p>
+			<label><input type="checkbox" name="know" value="html"> HTML</label>
+			<label><input type="checkbox" name="know" value="css"> CSS</label>
+			<label><input type="checkbox" name="know" value="js"> JavaScript</label>
+			<label><input type="checkbox" name="know" value="java"> Java</label>
+			<label><input type="checkbox" name="know" value="python"> Python</label>
+			<label><input type="checkbox" name="know" value="ruby"> Ruby</label>
+			<label><input type="checkbox" name="know" value="php"> PHP</label>
+			<label><input type="checkbox" name="know" value="c++"> C++</label>
+			<label><input type="checkbox" name="know" value="c"> C</label>
+			<label><input type="checkbox" name="know" value="go"> GO</label>
+		</fieldset>
+		<fieldset>
+			<p>Comentarios:</p>
+			<textarea name="additional-comments" placeholder="Comentarios adicionales"></textarea>
+		</fieldset>	
+		<fieldset>
+			<button type="submit">Enviar</button>
+		</fieldset>
+	</form>
+</body>
+</html>
