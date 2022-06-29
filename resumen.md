@@ -2426,24 +2426,150 @@ Agregamos otro `<div></div>` dentro de `<div class="canvas">`, con 'class' _two_
 ```
 
 #### **Step 24**
+Le damos al **`.two`** un 'width' de _475px_.
+
 #### **Step 25**
+Le damos al **`.two`** un 'height' de _200px_.
+
 #### **Step 26**
+Le damos al **`.two`** un 'background-color'.
+
 #### **Step 27**
+Le damos al **`.two`** un 'margin' con un valor _auto_.
+
 #### **Step 28**
+Agregamos un tercer `<div></div>` dentro de `<div class="canvas">`, con 'class' _three_.
+
+```html
+    <div class="frame">
+      <div class="canvas">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+    </div>
+```
+
 #### **Step 29**
+Además de usar los píxeles para dimensionar un elemento, también podemos usar, por ejemplo, porcentajes.
+Le damos al **`.three`** un 'width' con un valor del _91%_. 
+
 #### **Step 30**
+Le damos al **`.three`** un 'height' con un valor del _28%_. 
+
 #### **Step 31**
+Le damos al **`.three`** un 'background-color'. 
+
 #### **Step 32**
+Le damos al **`.three`** un 'margin' con un valor _auto_. 
+
 #### **Step 33**
+El margen inferior del elemento **`.one`** está empujando al elemento **`.two`** 20 píxeles hacia abajo.
+Para solucionar esto, vamos a eliminar el margen superior, centrar horizontalmente y establecer el margen inferior en 20px de **`.two`**. Utilizando la propiedad 'margin'.
+
+```css
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px auto; /* ← */
+}
+```
+
 #### **Step 34**
+Vamos a desenfocar la "pintura" con la propiedad 'filter' con un valor en _blur_ en el elemento **`.canvas`**.
+
+```css
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  overflow: hidden;
+  filter: blur(2px); /* ← */
+}
+```
+
 #### **Step 35**
+Aumentamos el desenfoque en los elementos **`.one`** y **`.two`**.
+
+```css
+.one, .two {
+  filter: blur(1px);
+}
+```
+
 #### **Step 36**
+Aumentamos el desenfoque en **`three`**.
+
 #### **Step 37**
+Aumentamos el área y suavizamos los bordes de **`.one`** con 'box-shadow'.
+
+```css
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762; /* ← */
+}
+```
+
 #### **Step 38**
+Usamos los mismo valores del 'box-shadow' de **`.one`** para **`.two`**, sólo cambiando el color.
+
 #### **Step 39**
+Usamos los mismo valores del 'box-shadow' de **`.one`** y **`.two`**, para **`.three`**, sólo cambiando el color.
+
 #### **Step 40**
+Redondeamos cada esquina del elemento **`.one`**, usando la propiedad 'border-radius'.
+
+```css
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762;
+  border-radius: 9px; /* ← */
+}
+```
+
 #### **Step 41**
+Usamos la propiedad 'border-radius' en **`.two`**.
+
 #### **Step 42**
+La propiedad 'border-radius' acepta cuatri valores para redondear: superior-izquierda, superior-derecha, inferior-derecha e inferior-izquierda, en ese orden.
+Usamos la propiedad 'border-radius' en **`.three`**.
+
 #### **Step 43**
+Usamos la propiedad 'transform' con un valor _rotate_ para girar (en sentido contrario de las agujas del reloj) el elemento **`.one`**.
+
+```css
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762;
+  border-radius: 9px;
+  transform: rotate(-0.6deg); /* ← */
+}
+```
+
 #### **Step 44**
+Rotamos el elemento **`.two`** (a favor de las agujas del reloj).
+
+```css
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg) /* ← */
+}
+```
+
 #### **Step 45**
+Rotamos el elemento **`.three`** (en sentido anti-horario).
