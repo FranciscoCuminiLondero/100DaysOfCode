@@ -10,3 +10,8 @@ Hasta el momento llevo completado del mismo:
 5. Encuesta - PROYECTO ([Formulario-Encuesta-HTML](DiseñoWebResponsivo\Formulario-Encuesta\index.html) y [Formulario-Encuesta-CSS](DiseñoWebResponsivo\Formulario-Encuesta\styles.css)).
 Y estoy en la mitad (51%) de "Aprende el Modelo de Cajas de CSS construyendo una pintura de Rothko". Esto es todo hasta el día de la fecha, además me ocupe de crear este repositorio con todos mis proyectos y subirlo a GitHub.
 6. Aprende el Modelo de Cajas de CSS construyendo una pintura de Rothko ([PinturaRothko-HTML](DiseñoWebResponsivo\PinturaRothko\index.html) y [PinturaRothko-CSS](DiseñoWebResponsivo\PinturaRothko\styles.css)).
+
+### Día 1 - 29/06/22
+Terminamos con:  
+6. Aprende el Modelo de Cajas de CSS construyendo una pintura de Rothko ([PinturaRothko-HTML](DiseñoWebResponsivo\PinturaRothko\index.html) y [PinturaRothko-CSS](DiseñoWebResponsivo\PinturaRothko\styles.css)).  
+y de resumirlo en [Resumen](resumen.md).
