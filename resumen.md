@@ -2573,3 +2573,331 @@ Rotamos el elemento **`.two`** (a favor de las agujas del reloj).
 
 #### **Step 45**
 Rotamos el elemento **`.three`** (en sentido anti-horario).
+
+### [Flexbox CSS](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/learn-css-flexbox-by-building-a-photo-gallery/step-1)
+
+#### **Step 1**
+Agregamos la estructura básica HTML comenzando con el `<!DOCTYPE html>` y continuando con el elemento `<hmtl></hmtl>` con su `<head></head>` y `<body></body>`.
+
+#### **Step 2**
+Agregamos dentro del `<head></head>` los elementos `<meta name="viewport" content="width=device-width, initial-scale=1">` y `<meta charset="utf-8">`.
+
+#### **Step 3**
+Agregamos dentro del `<head></head>` el `<title></title>` y `<link rel="stylesheet" type="text/css" href="styles.css">` para vincular el documento "_index.html_" con el "_styles.css_".
+
+#### **Step 4**
+Dentro del `<body></body>` creamos un `<div></div>` con 'class' con valor _header_ y dentro de este colocamos un `<h1></h1>`.
+
+```html
+  <body>
+    <div class="header">
+      <h1>CSS FLEXBOX PHOTO GALLERY</h1>
+    </div>
+  </body>
+```
+
+#### **Step 5**
+Dentro del `<body></body>` y debajo del `<div class="header"></div>`, creamos un nuevo `<div></div>` con 'id' con valor _gallery_ y dentro de este colocamos diez elementos `<img>`.
+
+#### **Step 6**
+Le asignamos a cada `<img>` un 'src'.
+
+#### **Step 7**
+El asterisco (*) selecciona todo el contenido del documento al que le va a modificar su estilo.
+Usamos la propiedad 'box-sizing con el valor _border-box_.
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+#### **Step 8**
+Seleccionamos las imagenes con el selector **`#gallery img`**, le asignamos un 'width' del _25%_ y un 'height' de _300px_, para poder verlas.
+
+```css
+#gallery img {
+  width: 25%;
+  height: 300px;
+}
+```
+
+#### **Step 9**
+Le sacamos al **`body`** el margin y le asingnamos un 'font-family' y un 'background-color'.
+
+#### **Step 10**
+Alineamos el texto del **`.header`** hacia el centro, le agregamos un 'padding' y un 'background-color'.
+
+#### **Step 11**
+Flexbox es un tipo de diseño CSS que se centra en el flujo de contenido, nos ofrece la posibilidad de controlar la forma en que los elementos se esapcian y alinean dentro de un **contenedor**.
+Para configurar un elemento para que sea una "caja flexible" (flexbox), le asignamos la propiedad 'display' con un valor _flex_. Le vamos a asignar dicha propiedad a **`#gallery`**
+
+```css
+#gallery {
+  display: flex;
+}
+```
+
+#### **Step 12**
+Se puede decir que **flexbox** tiene dos ejes: el **eje principal** y el **eje transversal**. El **eje principal** está determinado por la propiedad 'flex-direction'. Si 'flex-direction' se establece en _row_ o _row-reverse_, el eje principal es **horizontal**; si 'flex-direction' se establece en _column_ o _column-reverse_, el eje principal es **vertical**.
+Le damos **`#gallery`** un 'flex-direction' con un valor _row_.
+
+```css
+#gallery {
+  display: flex;
+  flex-direction: row;
+}
+```
+
+#### **Step 13**
+La propiedad 'flex-wrap' determina cómo se deben comportar los elementos cuando el flex container es muy chico. Establecer dicha propiedad con el valor _wrap_ permitirá que sus elementos se ajusten a la siguiente fila/columna (dependiendo de su eje principal), y si le asignamos _nowrap_ evitará que sus elementos se ajusten. Cuando se establece _nowrap_, los elementos pueden encogerse para ajustarse o desbordarse.
+Le damos a **`#gallery`** un 'flex-wrap' con un valor _wrap_, lo que hace que se creen cuatro columnas dependiendo del 'width que le dimos.
+
+```css
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+```
+
+#### **Step 14**
+La propiedad 'justify-content' determina cómo se colocan los elementos dentro de un **contenedor flexible** a lo largo del eje principal, lo que afecta su posición y el espacio que lo rodea.
+Le asignamos a **`#gallery`** la propiedad 'justify-content' con el valor _center_.
+
+```css
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+```
+
+#### **Step 15**
+La propiedad 'align-items' posiciona el **contenido flexible** a lo largo del eje transversal. En este caso, con su 'flex-direction' establecida en _row_, su eje trasnversal será vertical.
+Vamos a centrar vereticalmente las imágenes, dandole al selector **`#gallery`** una propiedad 'align-items' con el valor _center_.
+
+```css
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+#### **Step 16**
+Le damos a **`#gallery`** un 'padding'.
+
+#### **Step 17**
+Podemos usar la propiedad 'object-fit' para determinar cómo deben comportarse las imágenes.
+Vamos a asignarle a **`#gallery img`** la propiedad 'object-fit' con el valor _cover_, para indicarle a la imagen que llene el contenedor `<img>` mientras mantiene su relación de aspecto, que hará que se recorte para ajustarse.
+
+```css
+#gallery img {
+  width: 25%;
+  height: 300px;
+  object-fit: cover;
+}
+```
+
+#### **Step 18**
+Vamos a darle un poco de espacio entre las imágenes dandole un 'margin-top' y un 'padding' a **`#gallery img`**.
+
+#### **Step 19**
+Redondeamos un poco los bordes de las imágenes con 'border-radius' con el selector **`#gallery img`**.
+
+#### **Step 20**
+Creamos una "consulta de medios" o **`@media`** con un 'max-width' de _800px_, y detro le creamos una regla **`#gallery img`** y le establecemos la propiedad 'width' del _50%_. Esto convertirá la galería en un diseño de dos columnas.
+
+```css
+@media (max-width: 800px) {
+  #gallery img {
+  width: 50%;
+  }
+}
+```
+
+#### **Step 21**
+Por último, creemos otra "consultas de medio" para pantallas de menos de 600 píxeles de ancho. Dentro de ese **`@media`**, creamos la regla **`#gallery img`** y le establecemos la propiedad 'width' de un _100%_. Esto le dará a la galería un diseño de una sola columna, para pantalla menores de 600 píxeles.
+
+```css
+@media (max-width: 600px) {
+  #gallery img {
+    width: 100%;
+  }
+}
+```
+
+### [Tipografías](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/learn-typography-by-building-a-nutrition-label/step-1)
+
+#### **Step 1**
+Ya con el modelo básico de HTML creado, le asignamos al `<body></body>` un `<h1></h1>`.
+
+#### **Step 2**
+En el `<body></body>` debajo del `<h1></h1>` creamos un `<p></p>`.
+
+#### **Step 3**
+En el `<body></body>` debajo del `<p></p>` anterior, creamos otro `<p></p>`.
+
+#### **Step 4**
+Dentro del <head></head> agregamos un elemento <link> con el atributo 'rel' con el valor _stylesheet_ y otro 'href' con el valor _https://fonts.googleapis.com/css?family=Open+Sans:400,700,800_. Esto último, importará la 'font-family' **Open Sans**, con los valores _400_, _700_ y _800_.
+Por otra parte, agregamos el `<link>` que vincula al documento "_styles.css_".
+
+```html
+  <head>
+    <meta charset="UTF-8">
+    <title>Nutrition Label</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+```
+
+#### **Step 5**
+Le asignamos al **`body`** la 'font-family' de _"Open Sans"_ con un respaldo de _sans-serif_.
+
+```css
+body {
+  font-family: "Open Sans", sans-serif;
+}
+```
+***NOTA***: Las fuentes con espacios deben colocarse entre comillas (" " ó ' '). 
+
+#### **Step 6**
+Le asignamos al selector **`hmtl`** un 'font-size'.
+
+#### **Step 7**
+Rodeamos los elementos `<h1></h1>` y ambos `<p></p>` con un `<div></div>` con un atributo 'class' con valor _label_.
+
+#### **Step 8**
+Le colocamos unos bordes al **`.label`**.
+
+#### **Step 9**
+Le asignamos un 'width' al **`.label`**.
+
+#### **Step 10**
+Le asignamos un 'margin' y 'padding' al **`.label`**.
+
+#### **Step 11**
+De forma predeterminada, el navegador incluye el borde y el relleno al determinar el tamaño de un elemento.
+Para evitar esto, vamos a restablecer el modelo de caja, a través del selector **`*`** con la propiedad 'box-sizing' ("tamaño de caja") con un valor _border-box_ ("borde de caja").
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+#### **Step 12**
+Le asignamos a **`h1`** la propiedad 'font-weight' para darle mayor **grosor** a la fuente.
+
+```css
+h1 {
+  font-weight: 800;
+}
+```
+
+#### **Step 13**
+Le damos a **`h1`** un 'text-align' con un valor _center_.
+
+#### **Step 14**
+Le asignamos a **`h1`** un 'margin'.
+
+#### **Step 15**
+Le sacamos a **`p`** los 'margin'.
+
+#### **Step 16**
+Creamos un `<div></div>` con un atributo 'class' con un valor _divider_ y lo colocamos por debajo del `<h1></h1>`.
+
+#### **Step 17**
+Le asignamos a **`.divider`** un 'border-bottom' y un 'margin' para crear una línea divisoria, entre el título y los párrafos.
+
+#### **Step 18**
+La propiedad 'letter-spacing' se puede usar para ajustar el espacio entre cada carácter de texto en un elemento. Le asignamos un 'letter-spacing' a **`h1`**.
+
+```css
+h1 {
+  font-weight: 800;
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px;
+}
+```
+
+#### **Step 19**
+Le asignamos el atributo 'class' con un valor _bold_ al segundo `<p></p>`, dentro del **`.label`**.
+
+#### **Step 20**
+Le asignamos al selector **`bold`** la propiedad 'font-weight' con un valor _800_ y le sacamos la misma propiedad a **`h1`**.
+
+#### **Step 21**
+Le asignamos el atributo 'class' con un valor _bold_ a `<h1></h1>`, y así tomará las propiedades de dicho selector.
+
+#### **Step 22**
+El espaciado horizontal entre elementos con la misma importancia puede aumentar la legibilidad de su texto. 
+Rodeamos el texto "2/3 de taza (55g)" en un elemento `<span></span>` con un atributo 'class' y un valor _right_.
+
+```html
+    <div class="label">
+      <h1 class="bold">Nutrition Facts</h1>
+      <div class="divider"></div>
+      <p>8 servings per container</p>
+      <p class="bold">Serving size <span class="right">2/3 cup (55g)</span></p>
+    </div>
+```
+
+#### **Step 23**
+La propiedad 'float' se usa para colocar un elemento a la izquierda o derecha de su **contenedor**, permitiendo que otro contenido (como el texto) lo rodee.
+Creamos el selector **`.right`** y le asignamos 'float' con un valor _right_.
+
+```css
+.right {
+  float: right;
+}
+```
+
+#### **Step 24**
+#### **Step 25**
+#### **Step 26**
+#### **Step 27**
+#### **Step 28**
+#### **Step 29**
+#### **Step 30**
+#### **Step 31**
+#### **Step 32**
+#### **Step 33**
+#### **Step 34**
+#### **Step 35**
+#### **Step 36**
+#### **Step 37**
+#### **Step 38**
+#### **Step 39**
+#### **Step 40**
+#### **Step 41**
+#### **Step 42**
+#### **Step 43**
+#### **Step 44**
+#### **Step 45**
+#### **Step 46**
+#### **Step 47**
+#### **Step 48**
+#### **Step 49**
+#### **Step 50**
+#### **Step 51**
+#### **Step 52**
+#### **Step 53**
+#### **Step 54**
+#### **Step 55**
+#### **Step 56**
+#### **Step 57**
+#### **Step 58**
+#### **Step 59**
+#### **Step 60**
+#### **Step 61**
+#### **Step 62**
+#### **Step 63**
+#### **Step 64**
+#### **Step 65**
+#### **Step 66**
