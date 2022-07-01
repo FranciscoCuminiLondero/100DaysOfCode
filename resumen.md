@@ -2859,45 +2859,210 @@ Creamos el selector **`.right`** y le asignamos 'float' con un valor _right_.
 ```
 
 #### **Step 24**
+Colocamos el `<header></header>` envolvinedo todo lo que se encuentra dentro del `<div class="label"></div>`.
+
+```html
+    <div class="label">
+      <header>
+        <h1 class="bold">Nutrition Facts</h1>
+        <div class="divider"></div>
+        <p>8 servings per container</p>
+        <p class="bold">Serving size <span class="right">2/3 cup (55g)</span></p>
+      </header>
+    </div>
+```
+
 #### **Step 25**
+Actualizamos el selector **`h1`** a **`header h1`**, para apuntar especificamente al **`h1`** dentro del encabezado.
+
 #### **Step 26**
+Creamos un nuevo `<div></div>` con un 'class' con valor _divider lg_, debajo del `<header></header>`.
+
 #### **Step 27**
+Le asignamos al nuevo selector **`.lg`** la propiedad 'height'. También creamos un selector **`.lg, .md`** y le asignamos un 'background-color'.
+
 #### **Step 28**
+Le asignamos al selector **`.lg, .md`** un 'border' con un valor _0_, para quitarle los bordes al elemento.
+
 #### **Step 29**
+Debajo del `<div class="divider lg"></div>`, creamos otro `<div></div>` con eñ atributo 'class' con un valor _calories-info_.
+
 #### **Step 30**
+Dentro del elemento **`.calories-info`** anidamos un <p></p> con un atributo 'class' con un valor _bold sm-text_.
+
 #### **Step 31**
+La unidad **rem** significa "_root em_", y es relativa al tamaño de la fuente del elemento html.
+Le asignamos al selector **`.sm-text`** un 'font-size' de _0.85rem_ (que son aproximadamente 13,6 px, recordemos que configuramos el html para que tenga un 'font-size' de 16px).
+
 #### **Step 32**
+Debajo del elemento `<p class="bold sm-text"></p>` creamos un nuevo `<h1></h1>` con una parte de su texto rodeada por un `<span></span>` con una 'class' con un valor _right_.
+
 #### **Step 33**
+Asignamos con el selector **`.calories-info h1`** la propiedad 'margin'.
+
 #### **Step 34**
+Asignamos con el selector **`.calories-info span`** la propiedad 'font-size'.
+
 #### **Step 35**
+El tamaño de 'font-size' del número **230** hace que se desborde y se superponga el número al border del contenedor. Para evitar esto, le asignamos a **`.calories-info h1`** un 'overflow' (desbordamiento) con el valor _hidden_ (oculto).
+
 #### **Step 36**
+Le asignamos a **`.calories-info span`** un 'margin-top'.
+
 #### **Step 37**
+Creamos debajo del `<div class="calories-info"></div>` un nuevo `<div></div>` con el atributo 'class' con un valor _divider md_. 
+
 #### **Step 38**
+Le asignamos al selector **`.md`** un 'height'.
+
 #### **Step 39**
+Creamos debajo del `<div class="divider md"></div>` un nuevo `<div></div>` con un atributo 'class' con valor _daily-value sm-text_ y, dentro de este, creamos un nuevo `<p></p>` con una 'class' con un valor _right bold_. 
+
 #### **Step 40**
+El 'float' hace que el nuevo elemento `<p></p>` esté fuera del borde de la etiqueta. Colocamos un nuevo `<div class="divider"></div>` debajo del `<p class="right bold"></p>`.
+
 #### **Step 41**
+Le asignamos al selector **`.divider`** la propiedad 'clear' con un valor _right_, para borrar la propiedad 'float', empujando el divisor y cualquier contenido siguiente debajo del texto flotante.
+
+```css
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+  clear: right; /* Agregamos */
+}
+```
+
 #### **Step 42**
+Luego del elemento `<div class="divider"></div>` agregamos otro `<p></p>` con dos `<span></span>` seleccionando partes del texto.
+
+```html
+    <p><span class="bold">Total Fat</span> 8g <span class="bold right">10%</span></p>
+```
+
 #### **Step 43**
+Luego del `<p></p>` anterior agregamos uno nuevo con `<span></span>` en una parte del texto.
+
 #### **Step 44**
+Le asignamos al `<p></p>` anterior, un atributo 'class' con un valor _indent_.
+
 #### **Step 45**
+Creamos el selector **`.indent`** y le asignamos un 'margin-left' para simular una sangría.
+
 #### **Step 46**
+Creamos el selector **`.daily-value p`** para apuntar a todos los elementos `<p></p>` dentro de la sección **`.daily-value`**; y le asignamos un 'border-bottom'.
+
 #### **Step 47**
+Le agregamos a dos `<p></p>` otra 'class'.
+
+```html
+      <div class="daily-value sm-text">
+        <p class="right bold no-divider">% Daily Value *</p> <!-- no-divider -->
+        <div class="divider"></div>
+        <p><span class="bold">Total Fat</span> 8g<span class="bold right">10%</span></p>
+        <p class="indent no-divider">Saturated Fat 1g <span class="bold right">5%</span></p>
+      </div> <!-- no-divider -->
+```
+
 #### **Step 48**
+El **pseudo-selector** **`...:not`** se usa para seleccionar todos los elementos que no coincidan con la regla CSS dada.
+
+```css
+div:not(#ejemplo) {
+  color: red;
+}
+```  
+
+Esto selecciona todos los elementos `<div></div>` sin un 'id' con valor _ejemplo_.  
+Vamos a modificar el selector **`.daily-value p`** para que excluya los elementos **`.no-divider`**.
+
+```css
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+```
+
 #### **Step 49**
+Vamos a crear otro `<div class="divider"></div>` debajo del segundo **`no-divider`**.
+
 #### **Step 50**
+Debajo del `<div class="divider"></div>` anterior, creamos un nuevo `<p></p>`.
+
+```html
+        <div class="divider"></div>
+        <p class="indent no-divider"><i>Trans</i> Fat 0g</p>
+```
+
 #### **Step 51**
+Vamos a crear otro `<div class="divider"></div>` debajo del `<p></p>` anterior.
+
 #### **Step 52**
+Creamos un nuevo `<p></p>` con un par de `<span></span>`.
+
+```html
+        <div class="divider"></div>
+        <p><span class="bold">Cholesterol</span> 0mg <span class="bold right">0%</span></p>
+```
+
 #### **Step 53**
+Creamos otro `<p></p>` con un par de `<span></span>`.
+
+```html
+        <p><span class="bold">Sodium</span> 160mg <span class="right bold">7%</span></p>
+```
+
 #### **Step 54**
+Creamos otro `<p></p>` con un par de `<span></span>`.
+
+```html
+        <p><span class="bold">Total Carbohydrate</span> 37g <span class="right bold">13%</span></p>
+```
+
 #### **Step 55**
+Creamos otro `<p></p>` pero con el atributo 'class' con un valor _indent no-divider_ y luego creamos otro `<div class="divider"></div>`.
+
 #### **Step 56**
+Creamos otro `<p></p>` con el atributo 'class' con un valor _indent no-divider_ y luego creamos otro `<div class="divider"></div>`.
+
 #### **Step 57**
+La ventaja de crear estos **divisores** es que podemos aplicarles clases específicas para diseñarlos individualmente. Agregamos _dbl-indent_ a la 'class' del último **`.divider`**.
+
 #### **Step 58**
+Creando el selector **`.dbl-indent`** le asignamos un 'margin-left' específico a dicho divisor.
+
 #### **Step 59**
+Creamos otro `<p></p>` pero con el atributo 'class' con un valor _dbl-indent no-divider_ y con una parte seleccionada por un `<span></span>`;  y luego creamos otro `<div class="divider"></div>`.
+
+```html
+        <p class="dbl-indent no-divider">Includes 10g Added Sugars <span class="right bold">20%</span></p>
+        <div class="divider dbl-indent"></div>
+```
+
 #### **Step 60**
+Creamos otro `<p></p>` pero solo con el atributo 'class' con un valor no-divider_ y con una parte seleccionada por un `<span></span>`;  y luego creamos otro `<div class="divider lg"></div>`.
+
 #### **Step 61**
+Luego agregamos otro `<p></p>` con solo una parte seleccionada por un `<span></span>`.
+
 #### **Step 62**
+Agregamos otros dos `<p></p>` con solo una parte seleccionada por un `<span></span>`.
+
 #### **Step 63**
+Agregamos otro `<p></p>` con solo una parte seleccionada por un `<span></span>`, pero al `<p></p>` le asignamos la 'class' con un valor _no-divider_.
+
 #### **Step 64**
+Creamos un divisor mediano con `<div class="divider md"></div>` y agregamos un `<p></p>` con un 'class' con valor _note_.
+
 #### **Step 65**
+Le asignamos a **`.note`** las propiedades 'font-size' y 'margin'.
+
 #### **Step 66**
+Le asignamos a **`.note`** las propiedades 'padding' y 'text-indent', esta última es para asignarle sangría al texto.
+
+```css
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
+```
