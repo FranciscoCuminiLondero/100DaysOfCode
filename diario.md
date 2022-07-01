@@ -23,3 +23,8 @@ y de resumirlo en [Resumen](resumen.md).
 
 Continuamos con:  
 8. Aprende tipografía compilando una etiqueta nutricional ([EtiquetaNutricional-HTML](DiseñoWebResponsivo\EtiquetaNutricional\index.html) y [EtiquetaNutricional-CSS](DiseñoWebResponsivo\EtiquetaNutricional\styles.css)). (Nos quedamos en el **34%**).
+
+### **Día 3 - 01/07/22**
+Terminamos con:  
+8. Aprende tipografía compilando una etiqueta nutricional ([EtiquetaNutricional-HTML](DiseñoWebResponsivo\EtiquetaNutricional\index.html) y [EtiquetaNutricional-CSS](DiseñoWebResponsivo\EtiquetaNutricional\styles.css)).  
+y de resumirlo en [Resumen](resumen.md).
