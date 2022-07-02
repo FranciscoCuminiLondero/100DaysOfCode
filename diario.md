@@ -29,6 +29,6 @@ Terminamos con:
 8. Aprende tipografía compilando una etiqueta nutricional ([EtiquetaNutricional-HTML](DiseñoWebResponsivo\EtiquetaNutricional\index.html) y [EtiquetaNutricional-CSS](DiseñoWebResponsivo\EtiquetaNutricional\styles.css)).  
 y de resumirlo en [Resumen](resumen.md).
 
-### **Día 4 - 01/07/22**
+### **Día 4 - 02/07/22**
 Continuamos con:  
 9. Aprende accesibilidad construyendo un cuestionario ([CuestionarioDeAccesibilidad-HTML](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\index.html) y [CuestionarioDeAccesibilidad-CSS](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\styles.css)). (Nos quedamos en el **20%**).
