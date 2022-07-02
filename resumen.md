@@ -3066,3 +3066,176 @@ Le asignamos a **`.note`** las propiedades 'padding' y 'text-indent', esta últi
   text-indent: -8px;
 }
 ```
+### [Accesibilidad](https://www.freecodecamp.org/espanol/learn/2022/responsive-web-design/learn-accessibility-by-building-a-quiz/step-1)
+
+#### **Step 1**
+Creamos la estructura básica de un documento HTML.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+  </body>
+</html>
+```
+
+#### **Step 2**
+Asignamos un elemento `<meta>` con el atributo 'charset' con un valor _utf-8_, dentro del `<head></head>`.
+
+#### **Step 3**
+Agregamos el `<meta name="viewport" content="width=device-width, initial-scale=1">`  para que sea adaptable a otros dispositivos, dentro del `<head></head>`.
+
+#### **Step 4**
+Otro elemento `<meta>` importante para la accesibilidad y el SEO, es la definición de la **descripción**. Se utiliza el valor del atributo 'content' para proporcionar una descripción de la página.
+
+```html
+    <meta name="description" content="Proyecto de práctica del cuestionario de accesibilidad freeCodeCamp">
+```
+
+#### **Step 5**
+Asignamos el `<title></title>` de la página, dentro del `<head></head>`
+
+#### **Step 6**
+La navegación es fundamental para la **accesibilidad**, y los lectores de pantalla dependen de nosotros para proporcionar la estructura de la página. Esto se logra con elementos HTML semánticos.
+Agregamos los elementos `<header></header>` y `<main></main>`.
+El elemento `<header></header>` o **encabezado**, se usa para presentar la página y proporcionar un menú de navegación.
+El elemento `<main></main>` contendrá el contenido central de la página.
+
+#### **Step 7**
+Agregamos dentro del elemento `<header></header>` los elementos `<img>`, `<h1></h1>` y `<nav></nav>`. Además, le asignamos a la imagen un atributo 'id' con valor _logo_.
+
+#### **Step 8**
+Una propiedad útil de un SVG ("_Scalable Vector Graphics_" ó Gráficos Vectoriales Escalables) es que contiene un atributo 'path' que permite escalar la imagen sin afectar la resolución de la misma.
+Actualmente, la imagen que colocamos toma su tamaño predeterminado, el cual es muy grande. Entonces, usando su 'id' como selector, vamos a configurar el ancho o 'width'.
+
+```css
+#logo {
+	width: max(100px, 18vw);
+}
+```
+
+#### **Step 9**
+El **logotipo** debe conservar una relación de aspecto 35/4 y tener relleno alrededor del texto.
+Dentro del selector **`#logo`** asignamos un 'bakcground-color', un 'aspect-ratio' con el valor _35 / 4_ para establecer la relación de aspecto, y un 'padding'.
+
+```css
+#logo {
+  width: max(100px, 18vw);
+	background-color: #0a0a23;
+	aspect-ratio: 35 / 4;
+	padding: 0.4rem;
+}
+```
+
+#### **Step 10**
+Vamos a hacer que el **encabezado** ocupe todo el ancho de su **contenedor principal**, establecerle un 'height', un 'background-color' y por último un 'display' para usar *flebox*.
+
+```css
+header {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	background-color: #1b1b32; 
+}
+```
+
+#### **Step 11**
+Le asignamos a **`h1`** un 'color' para cambiar el color de la fuente y un 'font-size'.
+
+#### **Step 12**
+Para habilitar la navegación dentro de la página, vamos a agregar una **lista desordenada** con tres elementos (cada uno de estos elementos debe tener anidado un "anchor"). Todo esto va dentro de las etiquetas `<nav></nav>`.
+
+```html
+      <nav>
+        <ul>
+          <li><a>INFO</a></li>
+          <li><a>HTML</a></li>
+          <li><a>CSS</a></li>
+        </ul>
+      </nav>
+```
+
+#### **Step 13**
+Apuntando a los elementos de lista desordenada dentro del elemento de navegación, vamos a darle un 'display' con el valor _flex_ y un 'justify-content' con  el valor _space-evenly_  para espaciar uniformemente los elementos. 
+
+```css
+nav > ul {
+	display: flex;
+	justify-content: space-evenly; 
+}
+```
+
+#### **Step 14**
+Como es un ***cuestionario***, necesitaremos un **formulario** para que los usuario envíen respuestas. Para separar semánticamente el contenido del formulario podemos usar elementos ``<section></section>`.
+Entonces, dentro del `<main></main>` anidamos un `<form></form>` con tres `<section></section>`.
+Luego con el atributo 'action' en `<form>` asignamos la url donde quremos enviar el formulario y le asignamos el método correcto con el atributo 'method' con un valor _post_.
+
+```html
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section></section>
+        <section></section>
+        <section></section>
+      </form>
+    </main>
+```
+
+#### **Step 15**
+
+
+#### **Step 16**
+#### **Step 17**
+#### **Step 18**
+#### **Step 19**
+#### **Step 20**
+#### **Step 21**
+#### **Step 22**
+#### **Step 23**
+#### **Step 24**
+#### **Step 25**
+#### **Step 26**
+#### **Step 27**
+#### **Step 28**
+#### **Step 29**
+#### **Step 30**
+#### **Step 31**
+#### **Step 32**
+#### **Step 33**
+#### **Step 34**
+#### **Step 35**
+#### **Step 36**
+#### **Step 37**
+#### **Step 38**
+#### **Step 39**
+#### **Step 40**
+#### **Step 41**
+#### **Step 42**
+#### **Step 43**
+#### **Step 44**
+#### **Step 45**
+#### **Step 46**
+#### **Step 47**
+#### **Step 48**
+#### **Step 49**
+#### **Step 50**
+#### **Step 51**
+#### **Step 52**
+#### **Step 53**
+#### **Step 54**
+#### **Step 55**
+#### **Step 56**
+#### **Step 57**
+#### **Step 58**
+#### **Step 59**
+#### **Step 60**
+#### **Step 61**
+#### **Step 62**
+#### **Step 63**
+#### **Step 64**
+#### **Step 65**
+#### **Step 66**
+#### **Step 67**
