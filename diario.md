@@ -30,5 +30,9 @@ Terminamos con:
 y de resumirlo en [Resumen](resumen.md).
 
 ### **Día 4 - 02/07/22**
-Empezamos con:  
+Continuamos con:  
 9. Aprende accesibilidad construyendo un cuestionario ([CuestionarioDeAccesibilidad-HTML](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\index.html) y [CuestionarioDeAccesibilidad-CSS](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\styles.css)). (Nos quedamos en el **20%**).
+
+### **Día 5 - 04/07/22**
+Continuamos con:
+9. Aprende accesibilidad construyendo un cuestionario ([CuestionarioDeAccesibilidad-HTML](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\index.html) y [CuestionarioDeAccesibilidad-CSS](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\styles.css)). (Nos quedamos en el **49%**).
