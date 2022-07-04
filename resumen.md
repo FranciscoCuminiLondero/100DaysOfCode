@@ -3173,7 +3173,6 @@ nav > ul {
 Como es un ***cuestionario***, necesitaremos un **formulario** para que los usuario envíen respuestas. Para separar semánticamente el contenido del formulario podemos usar elementos ``<section></section>`.
 Entonces, dentro del `<main></main>` anidamos un `<form></form>` con tres `<section></section>`.
 Luego con el atributo 'action' en `<form>` asignamos la url donde quremos enviar el formulario y le asignamos el método correcto con el atributo 'method' con un valor _post_.
-
 ```html
     <main>
       <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
