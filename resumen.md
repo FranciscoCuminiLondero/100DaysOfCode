@@ -3185,26 +3185,178 @@ Luego con el atributo 'action' en `<form>` asignamos la url donde quremos enviar
 ```
 
 #### **Step 15**
+Para aumentar la accesibilidad de la página, el atributo 'role' se puede usar para indicar el proposito de un elemento para las tecnologías de asistencia. Este atributo forma parte de la "_Web Accessibility Initiative_" (WAI ó Iniciativa de Accesibilidad Web).
+Le vamos a asignar a cada una de las `<section></section>` un 'role' con valor _region_.
 
+```html
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region"></section>
+        <section role="region"></section>
+        <section role="region"></section>
+      </form>
+```
 
 #### **Step 16**
+Cada atributo 'role' requiere de una etiqueta visible, a la que debe hacer referencia el atributo 'aria-labelledby'. A cada `<section></section>` le asignamos un 'aria-labelledby'. Luego, anidamos dentro de cada `<section></section>` un `<h2></h2>` con un valor de 'id' identico al del 'arial-labelledby' de la `<section></section>`.
+
+```html
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+        </section>
+      </form>
+```
+
+
 #### **Step 17**
+La tipografía es muy importante en la accesibilidad de una página. Vamos a cambiar las fuentes de los `<h1></h1>` y `<h2></h2>`, y a colocarle una fuente segura como alternativa. Además de agregarle a los `<h2></h2>` un 'border-bottom' para diferenciar las secciones.
+
 #### **Step 18**
+Para poder navegar dentro de la página, vamos a asignarles a cada elemento de anclaje (`<a></a>`) un 'href' con el mismo valor que el 'id' de los `<h2></h2>`.
+
+```html
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+			  </ul>
+```
+
 #### **Step 19**
+Abajo del  primer `<h2></h2>` agregamos tres `<div></div>` con el atributo 'class' con un valor _info_. Dentro de cada `<div></div>` colocamos una `<label></label>` y debajo un `<input>`.
+
+```html
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label></label>
+            <input>
+          </div>
+          <div class="info">
+            <label></label>
+            <input> 
+          </div>
+          <div class="info">
+            <label></label>
+            <input>
+          </div>
+        </section>
+```
+
 #### **Step 20**
+Es importante vincular cada `<input>` con su `<label></label>` correspondiente. Esto le proporcionar a las tecnologías de asistencia una referencia visual a la entrada.
+Esto se hace dandole al `<label></label>` un atributo 'for' con el mismo valor que el 'id' del `<input>`. Vamos a vincular los `<input>` con su `<label></label>` correspondiente dentro de **Student Info**.
+
+```html
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">D.O.B.:</label>
+            <input id="birth-date" />
+          </div>
+        </section>
+```
+
 #### **Step 21**
+Es buena práctica asignarle a cada `<input>` un atributo 'type' y 'name' apropiadas. Además vamos a asignarle al primer `<input>` el atributo 'placeholder'.
+
 #### **Step 22**
+Aunque colocamos el atributo 'placeholder' en la etapa anterior, no es buena práctica ya que suele confundir. Vamos a confiar en que solo la `<label></label>` o etiqueta es la mejor práctica, y eliminaremos dicho atributo.
+
 #### **Step 23**
+Podriamos decir que "D.O.B" no es lo suficientemente descriptivo, y esto es especialmente correcto para los usuarios con discapacidad visual. Para evitar este problema, sin tener que agregar texto visible a la etiqueta, es agregar texto que sólo pueda leer un lector de pantalla.
+Para esto, agregamos un elemento `<span></span>` con un 'class' con un valor _sr-only_ (después del "D.O.B." dentro del `<label></label>`).
+
+```html
+            <label for="birth-date">D.O.B.<span class="sr-only"></span></label>
+```
+
 #### **Step 24**
+Dentro del elemento `<span></span>` colocamos "Date of Birth" entre parentesis.
+
+```html
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+```
+
 #### **Step 25**
+El texto de **`.sr-only`** es visible, podemos ocultarlos para que solo lo lean los lectores de pantalla. 
+Este patrón es para establecer las siguientes propiedades CSS:
+
+```css
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border: 0;
+```
+
+Se lo aplicamos a **`.sr-only`**.
+
 #### **Step 26**
+Dentro del segundo elemento `<section></section>` agregamos dos elementos `<div></div>` con un atributo 'class' con un valor _question-block_.
+Luego dentro de cada `<div></div>` agregamos un elemento `<p></p>` con números de forma creciente, comenzando con el 1, y un `<fieldset></fieldset>` con 'class' con valor _question_.
+
+```html
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question"></fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question"></fieldset>
+          </div>
+        </section>
+```
+
 #### **Step 27**
+Cada `<fieldset></fieldset>` contendrá una pregunta de verdadero/falso. Dentro de cada `<fieldset></fieldset>`, vamos a anidar un elemento `<legend></legend>` y un `<ul></ul>` con dos opciones.
+
 #### **Step 28**
+Le asignamos a cada `<fieldset></fieldset>` un atributo 'name' adecuado. Luego, le asignamos a cada lista desordenada el atributo 'class' con el valor _answers-list_.
+Por último, le asignamos texto a `<legend></legend>`.
+
 #### **Step 29**
+Necesitamos crear un conjunto de inputs que no permitan seleccionar ambas respuestas al mismo tiempo.
+Para esto, anidamos un elemento `<label></label>` dentro de cada elemento de la lista, y, a su vez, dentro de cada `<label></label>` anidamos un `<input>` con el 'type' adecuado (_radio_).
+
 #### **Step 30**
+Es buena práctica vincular una `<label></label>` con su elemento `<input>`. Esto se hace, como ya vimos, colocandole a la `<label></label>` un atributo 'for' con el mismo valor que el 'id' del `<input>` con el que lo queremos vincular.
+
 #### **Step 31**
+Asignamos texto a los elementos `<label></label>` de forma que el elemento `<input>` este antes. Y luego, asignamos a los `<input>` un atributo 'value' que coinsida con le texto.
+
 #### **Step 32**
+Vamos a evitar que se puedan seleccionar ambas entradas de radio colocandoles a ambas el mismo atributo 'name'.
+
 #### **Step 33**
+Para evitar repeticiones innecesarias, usaremos el pseudo-elemento **`...:before`** en el elemento **`p`** y le asignaremos una propiedad 'content' con el valor "_Question #"_.
+
+```css
+p:before {
+	content: "Question #";
+}
+```
+
 #### **Step 34**
 #### **Step 35**
 #### **Step 36**
