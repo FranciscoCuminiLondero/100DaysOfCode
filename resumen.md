@@ -3358,36 +3358,271 @@ p:before {
 ```
 
 #### **Step 34**
+La sección final del cuestionario tendrá un menú desplegable y un cuadro de texto.
+Anidamos dentro de la última sección un `<div></div>` con un atributo 'class' con un valor _formrow_, y dentro de este anidamos cuatro `<div></div>` alternando los atributos 'class' con los valores _question-block_ y _answer_.
+
 #### **Step 35**
+Dentro de los elementos `<div class="question-block"></div>` anidamos una `<label></label>`.
+
 #### **Step 36**
+Dentro del primer elemento `<div class="answer></div>"`, anidamos un elemento `<select></select>` con tres `<option></option>`.
+
 #### **Step 37**
+Vinculamos la primera `<label></label>` con el `<select></select>` y le asignamos a este último un atributo 'name'.
+
 #### **Step 38**
+Anidamos un elemento `<textarea></textarea>` dentro del segundo elemento `<div class="answer"></div>`, y establecemos el número de filas y columnas que va a tener.
+
 #### **Step 39**
+Al igual que con los elementos `<input>` y `<label></label>`, vinculemos el `<textarea></textarea>` con su `<label></label>` correspondient y asignemosle un atributo 'name'.
+
 #### **Step 40**
+Le damos un botón de envio al cuestionario.
+
 #### **Step 41**
+Dos elementos finales de semánticas son el `<footer></footer>` y el `<address></address>`. El elemento de pie de página o `<footer></footer>` es un contenedor para un conjunto de contenido relacionado con la página, y el elemento `<address></address>` es un contenedor para la información de contacto del autor de la página.
+Agregamos debajo del `<main></main>` el elemento `<footer></footer>` con un `<address></address>` anidado.
+
+```html
+    <footer>
+      <address>
+
+      </address>
+    </footer>
+```
+
 #### **Step 42**
+Le agregamos texto al `<address></address>`.
+
 #### **Step 43**
+Le agregamos a parte del texto dentro del `<address></address>` un _anchor_ o `<a></a>`.
+
 #### **Step 44**
+Seleccionamos los elemento de la lista del navegador con *`nav > ul > li`*, y le asignamos las propiedades: 'color', 'margin', 'padding' y 'display'.
+
 #### **Step 45**
+En la accesibilidad visual, el contraste entre elementos es un facto fundamental. Por ejemplo, el contraste entre el texto y el fondo de un encabezado debe ser de al menos **4,5:1**.
+Vamos a cambiar el color de la fuente de todos los elementos _anchor_ dentro de los elementos de la lista a algo con un _contrast ratio_ de al menos 7:1, con la propiedad 'color' con el valor _inherit_.
+
+```css
+li > a {
+  color: inherit;
+}
+```
+
+***NOTA***: El selector **mayor qué** (símbolo: **>**) es utilizado en CSS para seleccionar todos los elementos que sean directamente descendientes de otro.
+
 #### **Step 46**
+Para que los botones de navegación se parezcan más a los típicos, vamos a eliminar el subrayado del _anchor_, con 'text-decoration' con el valor _none_.
+Después, vamos a crear un selector dirigido a los elementos de la lista de navegación para que cuando el cursor se desplace sobre ellos, el color de fondo y el color del texto cambien, y el cursor se convierta en puntero (pointer).
+
+```css
+nav > ul > li:hover {
+	background-color: #dfdfe2;
+	color: #1b1b32;
+	cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+	text-decoration: none;
+}
+```
+
 #### **Step 47**
+Vamos a ordenar el **`header`** usando **flexbox** para dejar espacio entre los elementos secundarios ('justify-content' con el valor _space-between_) y centrandolos verticalmente ('align-items' con el valor _center_).
+Después, fijamos el **`header`** en la parte superior de la ventana ('position' con el valor _fixed_).
+
+```css
+header {
+  width: 100%;
+	height: 50px;
+	background-color: #1b1b32;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+}
+```
+
 #### **Step 48**
+Cuando el ancho de la pantalla es pequeño, el **`h1`** no envuelve su contenido de texto como debería. Debemos alinear el elemento **`h1`** en el centro.
+Después, le proporcionamos al **`main`** un 'padding' para que el encabezado de la sección **Student Info** se pueda ver.
+
+```css
+h1 {
+  color: #f1be32;
+	font-size: min(5vw, 1.2em);
+  text-align: center;
+}
+
+main {
+  padding-top: 50px;
+}
+```
+
 #### **Step 49**
+En pantallas pequeñas, la lista desordenada en la barra de navegación se desborda en el lado derecho de la pantalla.
+Vamos a solucionar esto usando 'flex-wrap' con el valor _wrap_ sobre **`nav > ul`**. Después, vamos a configurar las siguientes propiedades CSS para alinear correctamente el texto:
+
+```css
+align-items: center;
+padding-inline-start: 0;
+margin-block: 0;
+height: 100%;
+```
+
+```css
+nav > ul {
+  display: flex;
+	justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+```
+
 #### **Step 50**
+Establecemos el ancho de los elementos **`section`** al 80% de su contenedor principal. Después, usamos 'margin' para centrar los elementos de la **`section`** agregando 10px al margen inferior.
+Además, nos aseguraremos de que los elementos de **`section`** no puedan tener más de 600px de ancho.
+
 #### **Step 51**
+Le asignamos a **`h2`** un 'margin-top' y un 'padding-top'.
+
 #### **Step 52**
+Le asignamos al selector **`.info`** un 'padding' superior e izquierdo.
+
 #### **Step 53**
+Le damos a **`.formrow`** un 'margin' y 'padding'. También le cambiamos el tamaño de la fuente a los **`input`**.
+
 #### **Step 54**
+Para que la primera sección se vea más en línea, primero vamos a apuntar solo a los elementos **`input`** dentro de los elementos **`.info`** con **`.info input`** y, luego, le vamos a dar un ancho de 50% y vamos a alinear su texto a la izquierda.
+
 #### **Step 55**
+Vamos a apuntar a todos los elementos **`label`** dentro del elemento **`.info`**, y le vamos a dar un ancho del 10% y que no ocupe menos de 55px (con 'min-width').
+
 #### **Step 56**
+Para alinear las cajas de los **`input`** entre sí hacia la derecha, vamos a establecerle la propiedad 'display' con un valor _inline-block_ para todos los **`input`** y **`label`** dentro de **`.info`**. 
+
+```css
+.info input, .info label {
+ display: inline-block;
+ text-align: right;
+}
+```
+
 #### **Step 57**
+Para mejorar los elementos **`.question-block`**, vamos a establecerle algunas propiedades:
+
+```css
+.question-block {
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+```
+
 #### **Step 58**
+Vamos a hacer que los párrafos aparezcan con mayor prioridad, con las siguientes propiedades: 
+ 
+```css
+p {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+```
+
 #### **Step 59**
+Es útil ver el borde predeterminado alrededor del **`fieldset`**, durante el desarrollo, pero no queda muy bien después.
+Retiramos el borde y el 'padding-bottom' de los elementos **`.question`**.
+
 #### **Step 60**
+Eliminamos el estilo predeterminado para los elementos de la lista de **`.answers-list`** con la propiedad 'list-style' con su valor en _none_, y removemos el 'padding' de la lista desordenada.
+
+```css
+.answers-list {
+  list-style: none;
+  padding: 0;
+}
+```
+
 #### **Step 61**
+Le damos al botón de envio un diseño con las siguientes propiedades:
+
+```css
+button {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+```
+
 #### **Step 62**
+Establceemos el 'background-color' del **`footer`** y usamos **flexbox** para centrar horizontalmente le texto.
+
 #### **Step 63**
+Seleccionamos el **`footer`** y el **`footer a`** y le asignamos un 'color' para que el texto se vea bien dentro del nuevo fondo.
+
 #### **Step 64**
+Centramos horizontalmente todo el texto dentro del elemento **`address`** y agregamos un poco de 'padding'.
+
 #### **Step 65**
+Al hacer clic en los enlace, la ventana de visualización debería saltar a la sección correspondiente. Éste salto podría desorientar a algunos usuarios.
+Seleccionamos todos los elementos y establecemos la propiedad 'scroll-behavior' con el valor _smooth_, lo que producirá el efecto de bajar más lento.
+
+```css
+* {
+  scroll-behavior: smooth;
+}
+```
+
 #### **Step 66**
+La regla **`@media`** tiene una función llamada _prefers-reduce-motion_ para establecer el movimiento, y puede tomar los valores:
+* _reduce_.
+* _no-preference_.
+
+```css
+@media (característica: valor) {
+  selector {
+    estilo
+  }
+}
+```
+
+Colocamos la regla 'scroll-behavior: smooth;' dentro de una regla **`@media`** con la función de _prefers-reduce-motion_ con _no-preference_ como valor.
+
+```css
+@media (prefers-reduced-motion: no-preference){
+  * {
+    scroll-behavior: smooth;
+  }
+}
+```
+
 #### **Step 67**
+Finalmente, la accesibilidad de la navegación se puede mejorar proporcionando **atajos de teclado**.
+El atributo 'accesskey' acepta una lista de claves de acceso separadas por espacios: 
+
+```html
+<button type="submit" accesskey="s">Submit</button>
+```
+
+Asignale a cada enlace de navegación una clave de acceso de una letra.
+
+```html
+        <ul>
+          <li><a href="#student-info" accesskey="i">INFO</a></li>
+          <li><a href="#html-questions" accesskey="h">HTML</a></li>
+          <li><a href="#css-questions" accesskey="c">CSS</a></li>
+        </ul>
+```

@@ -36,3 +36,8 @@ Continuamos con:
 ### **Día 5 - 04/07/22**
 Continuamos con:
 9. Aprende accesibilidad construyendo un cuestionario ([CuestionarioDeAccesibilidad-HTML](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\index.html) y [CuestionarioDeAccesibilidad-CSS](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\styles.css)). (Nos quedamos en el **49%**).
+
+### **Día 6 - 06/07/22**
+Terminamos con:  
+9. Aprende accesibilidad construyendo un cuestionario ([CuestionarioDeAccesibilidad-HTML](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\index.html) y [CuestionarioDeAccesibilidad-CSS](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\styles.css)).  
+y de resumirlo en [Resumen](resumen.md).

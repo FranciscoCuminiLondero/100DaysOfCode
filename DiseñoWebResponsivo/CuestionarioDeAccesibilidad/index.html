@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,9 +85,35 @@
         </section>
         <section role="region" aria-labelledby="css-questions">
           <h2 id="css-questions">CSS</h2>
-
+          <div class="formrow">
+            <div class="question-block">
+              <label for="customer">¿Eres un desarrollador front-end?</label>
+            </div>
+            <div class="answer">
+              <select name="customer" id="customer" required>
+                <option value="">(Selecciona una opción)</option>
+                <option value="yes">Si</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-questions">Tienes alguna pregunta:</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-questions" name="css-questions" rows="5" cols="24" placeholder="Qué es flexbox..."></textarea>
+            </div>
+          </div>
         </section>
+        <button type="submit">Enviar</button>
       </form>
     </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+        Santa Fe<br />
+        Rosario<br />
+        Argentina
+      </address>
+    </footer>
   </body>
 </html>
