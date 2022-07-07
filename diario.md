@@ -42,3 +42,6 @@ Terminamos con:
 9. Aprende accesibilidad construyendo un cuestionario ([CuestionarioDeAccesibilidad-HTML](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\index.html) y [CuestionarioDeAccesibilidad-CSS](DiseñoWebResponsivo\CuestionarioDeAccesibilidad\styles.css)).  
 y de resumirlo en [Resumen](resumen.md).
 
+### **Día 7 - 07/07/22**
+Empezamos el proyecto:
+10. Página Tributo - PROYECTO ([PaginaTributo-HTML](DiseñoWebResponsivo\PaginaTributo\index.html) y [PaginaTributo-CSS](DiseñoWebResponsivo\PaginaTributo\styles.css)). 
