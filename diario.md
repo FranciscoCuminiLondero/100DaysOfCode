@@ -43,5 +43,9 @@ Terminamos con:
 y de resumirlo en [Resumen](resumen.md).
 
 ### **Día 7 - 07/07/22**
-Empezamos el proyecto:
+Empezamos el proyecto:  
+10. Página Tributo - PROYECTO ([PaginaTributo-HTML](DiseñoWebResponsivo\PaginaTributo\index.html) y [PaginaTributo-CSS](DiseñoWebResponsivo\PaginaTributo\styles.css)). 
+
+### **Día 8 - 11/07/22**
+Terminamos el proyecto:  
 10. Página Tributo - PROYECTO ([PaginaTributo-HTML](DiseñoWebResponsivo\PaginaTributo\index.html) y [PaginaTributo-CSS](DiseñoWebResponsivo\PaginaTributo\styles.css)). 
